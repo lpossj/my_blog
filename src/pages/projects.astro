@@ -1,0 +1,110 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead
+			title={`项目 | ${SITE_TITLE}`}
+			description="展示我的个人项目和学习实践。"
+		/>
+	</head>
+
+	<body>
+		<Header />
+
+		<main>
+			<section class="projects-header">
+				<p class="eyebrow">PROJECTS</p>
+				<h1>我的项目</h1>
+				<p>
+					这里以后会展示我的人工智能、计算机视觉、
+					OpenCV 和其他开发项目。
+				</p>
+			</section>
+
+			<section class="empty-projects">
+				<div class="empty-icon">🚧</div>
+				<h2>项目正在准备中</h2>
+				<p>
+					目前还没有正式发布的个人项目。
+					完成后会在这里展示项目介绍、技术栈和源代码。
+				</p>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: min(900px, calc(100% - 2rem));
+		margin: 0 auto;
+		padding: 4rem 0;
+	}
+
+	.projects-header {
+		max-width: 720px;
+		margin-bottom: 3rem;
+	}
+
+	.eyebrow {
+		margin-bottom: 0.5rem;
+		color: rgb(var(--accent));
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+	}
+
+	h1 {
+		margin: 0 0 1rem;
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		line-height: 1.1;
+	}
+
+	.projects-header p:last-child {
+		color: rgb(var(--gray));
+		font-size: 1.1rem;
+		line-height: 1.8;
+	}
+
+	.empty-projects {
+		padding: 4rem 2rem;
+		text-align: center;
+		background: rgb(var(--gray-light));
+		border: 1px dashed rgba(var(--gray), 0.35);
+		border-radius: 18px;
+	}
+
+	.empty-icon {
+		margin-bottom: 1rem;
+		font-size: 3rem;
+	}
+
+	.empty-projects h2 {
+		margin-bottom: 0.8rem;
+		font-size: 1.6rem;
+	}
+
+	.empty-projects p {
+		max-width: 580px;
+		margin: 0 auto;
+		color: rgb(var(--gray));
+		line-height: 1.8;
+	}
+
+	@media (max-width: 600px) {
+		main {
+			padding: 2.5rem 0;
+		}
+
+		.empty-projects {
+			padding: 3rem 1.2rem;
+		}
+	}
+</style>
