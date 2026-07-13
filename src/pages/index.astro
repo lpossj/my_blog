@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>我是D4Y0</h1>
+			<p>
+				这是我的博客
+			</p>
+			<p>
+				我是一名计算机专业的学生，正在学习人工智能、机器视觉、OpenCV、
+				缺陷检测的人工智能等开发。
+			</p>
+			<p>我的技术方向：</p>
+			<ul>
+    			<li>Python 与 C/C++ 编程</li>
+    			<li>OpenCV 图像处理</li>
+    			<li>YOLO 目标检测</li>
+    			<li>Linux 与机器人开发</li>
+    			<li>Web 前端与后端开发</li>
+			</ul>
+
+			<h2>博客内容</h2>
+			<p>
+				这里会记录我的学习笔记、项目开发过程、问题解决方法和技术总结。
+			</p>
+			<p>
+				<a href="/blog/">查看博客文章 →</a>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
